@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TodoItem from './TodoItem';
+import { motion } from 'framer-motion';
 import './TodoList.css';
 
 const TodoList = () => {
@@ -32,7 +33,9 @@ const TodoList = () => {
 
     return (
         <div className="todo-list-container">
-            <h1>My To-Do List</h1>
+            <motion.h1>
+                To-Do list:
+            </motion.h1>
             <form onSubmit={handleAddTask} className="todo-form">
                 <input
                     type="text"

@@ -1,0 +1,62 @@
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: solid 1px white;
+}
+  
+.todo-checkbox {
+    margin-right: 1rem;
+}
+  
+.todo-text {
+    flex-grow: 1;
+}
+  
+.completed {
+    text-decoration: line-through;
+    color: #A9A9A9;
+}
+
+.delete-btn {
+    background-color: #DE0D92;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #dc39a0;
+}
+
+.todo-checkbox {
+    display: none;;
+  }
+  
+  .custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    position: relative;
+    vertical-align: middle;
+  }
+  
+  .todo-checkbox:checked + .custom-checkbox:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid #95C623;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }

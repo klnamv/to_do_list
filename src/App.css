@@ -1,0 +1,69 @@
+*{
+  background-color: #252627;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  position: relative;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.star {
+  position: absolute;
+}
+
+.star-1 {
+  top: 5%;
+  left: 10%;
+}
+
+.star-2 {
+  right: 10%;
+  top: -10%;
+}
+
+.star-3 {
+  right: 7%;
+  top: 15%;
+}
+
+.star-4 {
+  bottom: -20%;
+  right: 7%;
+}
