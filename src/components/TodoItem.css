@@ -1,23 +1,25 @@
 .todo-item {
+    position: relative;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
     padding: 1rem;
+    padding-right: 80px;
     border-radius: 5px;
     border: solid 1px white;
-    flex-wrap: wrap;
-    gap: 10px; 
 }
-  
-.todo-checkbox {
-    margin-right: 1rem;
-}
-  
+
 .todo-text {
     flex-grow: 1;
-    font-size: 14px;
+    flex-shrink: 1;
+    margin-right: 10px;
     min-width: 0;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
 }   
   
 .completed {
@@ -26,12 +28,19 @@
 }
 
 .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: #DE0D92;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: auto;
+    align-self: flex-end;
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    width: auto; 
 }
 
 .delete-btn:hover {
@@ -39,7 +48,9 @@
 }
 
 .todo-checkbox {
-    display: none;;
+    margin-right: 1rem;
+    display: none;
+
   }
   
   .custom-checkbox {
