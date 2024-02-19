@@ -6,6 +6,8 @@
     padding: 1rem;
     border-radius: 5px;
     border: solid 1px white;
+    flex-wrap: wrap;
+    gap: 10px; 
 }
   
 .todo-checkbox {
@@ -13,12 +15,17 @@
 }
   
 .todo-text {
+    max-width: 50px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     flex-grow: 1;
-}
+    font-size: 14px;
+}   
   
 .completed {
-    text-decoration: line-through;
-    color: #A9A9A9;
+    text-decoration: line-through #DE0D92 wavy;;
+    color: grey;
 }
 
 .delete-btn {

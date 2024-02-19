@@ -6,11 +6,12 @@ body, html {
 }
 
 .todo-list-container {
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 700px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    color: white;
 }
 
 .todo-form {
@@ -30,14 +31,14 @@ body, html {
 .todo-submit-btn {
     padding: 10px 20px;
     border: none;
-    background-color: #FF206E;
+    background-color: #226CE0;
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .todo-submit-btn:hover {
-    background-color: #226CE0;
+    background-color: #FF206E;
 }
 
 .todo-items {
