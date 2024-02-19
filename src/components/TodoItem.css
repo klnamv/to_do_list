@@ -15,17 +15,14 @@
 }
   
 .todo-text {
-    max-width: 50px; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     flex-grow: 1;
     font-size: 14px;
+    min-width: 0;
 }   
   
 .completed {
-    text-decoration: line-through #DE0D92 wavy;;
-    color: grey;
+    text-decoration: line-through #383F51 wavy;;
+    color: #A9A9A9;
 }
 
 .delete-btn {
