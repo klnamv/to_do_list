@@ -28,6 +28,12 @@ const TodoList = () => {
         setInputText('')
     };
 
+    const handleEdit = (id) => {
+        setTasks(tasks.map(task =>
+          task.id === id ? { ...task, isEditing: !task.isEditing } : task
+        ));
+      };
+
     const handleDelete = (id) => {
         setTasks(tasks.filter(task => task.id !== id));
     };
@@ -58,6 +64,7 @@ const TodoList = () => {
                     <TodoItem 
                         key={task.id} 
                         task={task} 
+                        handleEdit={() => handleEdit(task.id)}
                         handleDelete={() => handleDelete(task.id)} 
                         toggleComplete={() => toggleComplete(task.id)} 
                     />

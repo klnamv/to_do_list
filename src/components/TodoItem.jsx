@@ -1,7 +1,7 @@
 import React from 'react';
 import './TodoItem.css';
 
-const TodoItem = ({ task, toggleComplete, handleDelete }) => {
+const TodoItem = ({ task, handleEdit, toggleComplete, handleDelete }) => {
     return (
       <div className='todo-item'>
         <label className={task.isCompleted ? 'todo-label completed' : 'todo-label'}>
@@ -14,9 +14,14 @@ const TodoItem = ({ task, toggleComplete, handleDelete }) => {
           <span className='custom-checkbox'></span>
           <span className='todo-text'>{task.text}</span>
         </label>
-        <button className='delete-btn' onClick={handleDelete}>
-          Delete
-        </button>
+        <div className='control-panel'>
+          <button className='edit-btn' onClick={handleDelete}>
+            Edit
+          </button>
+          <button className='delete-btn' onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
       </div>
     );
 };
