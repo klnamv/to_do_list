@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Reorder } from "framer-motion";
 import TodoItem from './TodoItem';
 import { motion } from 'framer-motion';
 import './TodoList.css';
@@ -59,17 +60,22 @@ const TodoList = () => {
                 />
                 <button type="submit" className="todo-submit-btn">Add Task</button>
             </form>
-            <ul className="todo-items">
-                {tasks.map((task) => (
-                    <TodoItem 
-                        key={task.id} 
-                        task={task} 
-                        handleEdit={() => handleEdit(task.id)}
-                        handleDelete={() => handleDelete(task.id)} 
-                        toggleComplete={() => toggleComplete(task.id)} 
-                    />
-                ))}
-            </ul>
+
+            <Reorder.Group axis="y" values={tasks} onReorder={setTasks}>
+                <ul className="todo-items">
+                    {tasks.map((task) => (
+                        <Reorder.Item key={task.id} value={task}>
+                            <TodoItem 
+                                key={task.id} 
+                                task={task} 
+                                handleEdit={() => handleEdit(task.id)}
+                                handleDelete={() => handleDelete(task.id)} 
+                                toggleComplete={() => toggleComplete(task.id)} 
+                            />
+                        </Reorder.Item>
+                    ))}
+                </ul>
+            </Reorder.Group>
         </div>
     )
 }
